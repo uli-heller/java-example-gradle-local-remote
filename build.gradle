@@ -1,0 +1,26 @@
+plugins {
+  id 'java'
+  id 'org.springframework.boot' version '3.4.1'
+}
+
+group = 'com.example'
+version = '0.0.2'
+
+java {
+  sourceCompatibility = '21'
+}
+
+repositories {
+    mavenCentral()
+    maven {
+      allowInsecureProtocol = true
+      url("file://${projectDir}/maven-repository")
+      //url("http://localhost:8888/maven-repository")
+    }
+}
+
+dependencies {
+  implementation platform(org.springframework.boot.gradle.plugin.SpringBootPlugin.BOM_COORDINATES)
+  implementation 'org.springframework.boot:spring-boot-starter-web'
+  implementation 'cool.heller.uli:hello-world:+'
+}
