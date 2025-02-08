@@ -111,4 +111,5 @@ Using Remote Package Registry
 - Examine the outcome:
   - `unzip -v build/libs/java-example-gradle-local-remote-0.0.2.jar|grep hello`
   - hello-world-0.9.1-plain.jar
-- Note: The initial version does not change!
+- Note: The additional version is not used - the initial version
+  remains within the outcome!
